@@ -1,0 +1,9 @@
+.social {
+  &__insta:hover path {
+    stroke: $color-gold;
+  }
+  &__insta:hover path {
+    transition: all 0.2s;
+    stroke: $color-gold;
+  }
+}
