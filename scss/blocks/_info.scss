@@ -7,11 +7,47 @@
   gap: 60px;
   padding-bottom: 95px;
 
+  @media screen and (max-width: $breakpoints-lg) {
+    padding: 100px 100px;
+    gap: 40px;
+   }
+
+   
+  @media screen and (max-width: $breakpoints-md) {
+    padding: 80px 50px;
+    gap: 40px;
+   }
+
+   @media screen and (max-width: $breakpoints-sm) {
+    padding: 50px 20px;
+   }
+   @media screen and (max-width: $breakpoints-xsm) {
+    padding: 50px 15px;
+    gap: 20px;
+   }
+
+   &__svg {
+
+    @media screen and (max-width: $breakpoints-md) {
+      width: 64px;
+     }
+   
+     @media screen and (max-width: $breakpoints-sm) {
+      width: 58px;
+     }
+     
+    @media screen and (max-width: $breakpoints-xsm) {
+      width: 40px;
+     }
+
+   }
   &__description {
-    max-width: 856px;
+    max-width: 886px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+ 
   }
 
   &__text {
@@ -19,5 +55,16 @@
     font-family: "Cormorant Garamond";
     font-size: 27px;
     line-height: 35.1px;
+
+    @media screen and (max-width: $breakpoints-lg) {
+      font-size: 21px;
+     }
+     @media screen and (max-width: $breakpoints-md) {
+      font-size: 18px;
+      line-height: 30px;
+     }
+     @media screen and (max-width: $breakpoints-md) {
+      line-height: 28px;
+     }
   }
 }

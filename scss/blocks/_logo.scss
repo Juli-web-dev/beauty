@@ -3,4 +3,12 @@
     fill: $color-gold;
     transition: all 0.2s;
   }
+
+  &__svg {
+    @media screen and (max-width: $breakpoints-lg) {
+      width: 40px;
+      height: 40px;
+      }
+  }
+
 }

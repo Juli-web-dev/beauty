@@ -1,11 +1,25 @@
 .works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:55px;
+  align-items: center;
+
   &__buttons {
-    width: 722px;
+    max-width: 722px;
     display: flex;
-    justify-content: space-between;
     gap: 60px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    padding-bottom: 55px;
+ 
+
+    @media screen and (max-width: $breakpoints-lg) {
+      gap: 30px;
+    }
   }
   &__button {
     background: transparent;
@@ -18,11 +32,57 @@
   }
 
   &__images {
-    max-width: 1296px;
-
+    justify-content: space-between;
+    max-width: 1326px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 24px 24px;
+
+    @media screen and (max-width: 1330px) {
+      justify-content: center;
+      gap: 80px 80px;
+    }
+
+    
+    @media screen and (max-width: $breakpoints-lg) {
+      gap: 50px 50px;
+    }
+  }
+
+  &__image {
+    max-width: 416px;
+    width: 100%;
+
+    @media screen and (max-width: 1330px) {
+      &_hidden{
+        display: none;
+      }
+    }
+  
+    @media screen and (max-width: $breakpoints-lg) {
+      max-width: 350px;
+    }
+
+    @media screen and (max-width: $breakpoints-sm) {
+      max-width: 320px;
+    }
+  }
+
+  &__more {
+    display: none;
+    color: white;
+    background-color: transparent;
+    border: $color-gold 1px solid;
+    max-width: 250px;
+    padding: 20px 50px;
+    font-family: "Cormorant Garamond";
+    font-size: 20px;
+    cursor: pointer;
+    
+    @media screen and (max-width: 1330px) {
+      display: block;
+   
+    }
   }
 }

@@ -1,33 +1,66 @@
 .services {
-  max-width: 1296px;
+  max-width: 1326px;
   margin: 0 auto;
-  pad: 0 15px;
+
   &__items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 60px 24px;
+
+    @media screen and (max-width: 1330px) {
+      justify-content: space-around;
+    }
+    @media screen and (max-width: $breakpoints-md) {
+      overflow-x: scroll;
+      flex-wrap: nowrap;
+      padding: 20px 0;
+      gap: 60px;
+    }
   }
   &__item {
     position: relative;
+    max-width: 396px;
+    width: 100%;
 
     &::after {
       content: "";
       display: block;
       position: absolute;
-      width: 396px;
-      height: 300px;
+      max-width: 396px;
+      max-height: 300px;
+      width: 100%;
+      height: 100%;
       border: 1px solid $color-gold;
       opacity: 0.5;
       z-index: -30;
       left: 0;
       top: 0;
       transform: translate(20px, -20px);
+
+      @media screen and (max-width: $breakpoints-sm) {
+        width: 300px;
+        max-height: 220px;
+      }
+
+      @media screen and (max-width: $breakpoints-xsm) {
+        width: 250px;
+        max-height: 160px;
+      }
     }
   }
   &__img {
     width: 396px;
-    height: 300px;
+    max-width: unset;
+
+    @media screen and (max-width: $breakpoints-sm) {
+      width: 300px;
+    }
+
+    @media screen and (max-width: $breakpoints-xsm) {
+      width: 250px;
+ 
+    }
   }
   &__text {
     padding-top: 30px;
@@ -35,5 +68,15 @@
     font-family: "Cormorant Garamond";
     font-weight: 400;
     line-height: 36px;
+
+    @media screen and (max-width: $breakpoints-sm) {
+      font-size: 25px;
+      line-height: 26px;
+    }
+
+    @media screen and (max-width: $breakpoints-xsm) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }

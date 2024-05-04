@@ -1,14 +1,34 @@
 .footer {
-  padding-top: 100px;
+  padding: 100px 15px 0 15px;
+
+  @media screen and (max-width: $breakpoints-lg) {
+    padding: 100px 50px 0 50px;
+  }
+
+  &__inner {
+
+
+    @media screen and (max-width: $breakpoints-lg) {
+      display: flex;
+      justify-content: space-between;
+     }
+ 
+
+  }
 
   &__container {
-    max-width: 1296px;
+    max-width: 1326px;
     border-bottom: rgba($color: white, $alpha: 0.5) 0.2px solid;
     border-top: rgba($color: white, $alpha: 0.5) 0.2px solid;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     padding: 80px 0;
+
+    @media screen and (max-width: $breakpoints-lg) {
+     flex-direction: column;
+     gap:20px;
+    }
    
   }
 
@@ -29,14 +49,60 @@
 
   &__title {
     font-size: 24px;
-    padding-bottom: 25px;
     font-family: 'EB Garamond';
   }
-  &__inner {
+  &__list {
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     font-size: 18px;
     gap: 15px;
     font-family: "Cormorant Garamond";
+
+    @media screen and (max-width: $breakpoints-lg) {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+     }
   }
+}
+.footer__inner_active {
+  display: block;
+}
+.plus {
+
+  position: relative;
+  display: none;
+
+
+  @media screen and (max-width: $breakpoints-lg) {
+    display: block;
+   }
+
+  &__lines {
+    top:50%;
+    background-color: white;
+    width: 20px;
+    height: 2px;
+    z-index: 20;
+    display: block;
+    position: absolute;
+
+
+  }
+  &__line1 {
+    transform: rotate(0deg);
+    top: 50%;
+  }
+  &__line2 {
+    transform: rotate(-90deg);
+    top: 50%;
+    transition-duration: 0.25s;
+  }
+}
+
+.plus_active .plus__line2 {
+
+   transform: rotate(0deg);
+
 }

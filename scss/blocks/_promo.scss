@@ -8,7 +8,13 @@
   justify-content: center;
   position: relative;
 
+  @media screen and (max-width: $breakpoints-sm) {
+   height: 100vh;
+   }
+
   &__title {
+    max-width: 600px;
+    width: 100%;
     top: 360px;
     left: 50%;
     transform: translateX(-50%);
@@ -17,6 +23,27 @@
     font-family: "EB Garamond";
     line-height: 86.4px;
     font-weight: 700;
+
+    @media screen and (max-width: $breakpoints-lg) {
+      font-size: 64px;
+      max-width: 500px;
+      line-height: 80px;
+     }
+     @media screen and (max-width: $breakpoints-md) {
+      font-size: 48px;
+      max-width: 400px;
+      line-height: 70px;
+     }
+     @media screen and (max-width: $breakpoints-sm) {
+      font-size: 38px;
+      max-width: 300px;
+      line-height: 60px;
+     }
+     @media screen and (max-width: $breakpoints-xsm) {
+      font-size: 30px;
+      max-width: 250px;
+      line-height: 50px;
+     }
   }
 
   &__button {
@@ -26,7 +53,7 @@
     gap: 20px;
     align-items: center;
     bottom: 100px;
-    z-index: 10;
+    z-index: 2;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
